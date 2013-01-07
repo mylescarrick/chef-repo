@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook "apt"
+
+cookbook "ntp"
+
+cookbook "users"
+
+cookbook "sudo"
+
+cookbook "postgresql"
+cookbook "database"
+
+cookbook 'ruby_build',
+  :git => 'https://github.com/fnichol/chef-ruby_build.git'
+cookbook 'rbenv',
+  :git => 'https://github.com/fnichol/chef-rbenv.git'
+
+cookbook 'aaibs',
+  :path => 'local/aaibs'
+
+cookbook 'ruby',
+  :path => 'local/ruby'
+
